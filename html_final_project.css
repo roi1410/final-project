@@ -1,0 +1,626 @@
+body {
+  background-image: linear-gradient(360deg, black, red);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  height: 235vh;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+a{
+  display: flex;
+  flex: none;
+  font-size: 1.5vw;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: italic;
+  color: aliceblue;
+  
+}
+
+.navbar_conteiner {
+  display: flex;
+  width: 100%;
+  height: 125px;
+
+  background-size: cover;
+}
+.navbar_conteiner .logo img {
+  height: 125px;
+  width: 125px;
+}
+#checkbox_img{
+  display: none;
+  
+}
+
+#menue_button_m{
+  display: none;
+}
+
+#mobail_manue {
+  display: none;
+}
+#mobail_manue_svg { 
+  display: none;
+}
+.btn_nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(https://img.freepik.com/premium-photo/red-background-with-music-notes-black-background_862489-1952.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn {
+  font-size: 1.1vw;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #ff0072;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #ff0072;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.btn:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #ff0072;
+  z-index: -1;
+}
+
+.btn:hover,
+button:focus {
+  color: white;
+}
+
+.btn:hover:before,
+.btn:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+.all_elemnts_nonavbar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* hearo */
+video {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+}
+
+.hearo {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+}
+.upper_backgrawond {
+  width: 100%;
+  height: 10vh;
+  text-align: center;
+  z-index: 1;
+}
+#head_hero {
+  display: flex;
+  flex: none;
+  font-size: 6vw;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: italic;
+  color: aliceblue;
+}
+#fade {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0),
+    rgba(161, 0, 0, 0.473)
+  );
+  width: 100%;
+  height: 10vh;
+  z-index: 1;
+  position: absolute;
+}
+#fade_black {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0),
+    rgba(0, 0, 0, 0.223)
+  );
+  width: 100%;
+  height: 10vh;
+  /* z-index: 1; */
+  
+}
+#fade_red {
+  background-image: linear-gradient(
+    90deg,
+    rgb(255, 0, 0),
+    rgba(0, 0, 0, 0.223)
+  );
+  width: 100%;
+  height: 10vh;
+  /* z-index: 1; */
+  
+}
+/* products */
+
+h1 {
+  font-size: 10vw;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0.5)
+    ),
+    url(https://img.freepik.com/free-photo/grunge-background-red-brushstrokes-black-background_125540-2396.jpg?w=360);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Open Sans";
+  color: rgb(66, 46, 46);
+  margin-top:0 ;
+  margin-bottom:0 ;
+}
+
+.card {
+  position: relative;
+  background: #c84f4f;
+  width: 26vw;
+  height: 40vh;
+  border-radius:8px;
+  cursor: pointer;
+  transition: all 120ms;
+  overflow: hidden;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+}
+
+.card:active {
+  transform: scale(0.95);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 25px 5px rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.card::after {
+  content: "Add to Cart";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  padding-left: 15px;
+  background: #181818;
+  width: 100%;
+  height: 60px;
+  color: #fff;
+  line-height: 50px;
+  text-transform: uppercase;
+  z-index: 2;
+  transition: all 0.2s ease-in;
+}
+
+.card:hover::after {
+  bottom: 0;
+}
+
+.card:active::after {
+  content: "Adding !";
+  height: 65px;
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(3px 3px 5px #18181815);
+  transform: translate(-50%, -50%);
+  animation: shoes 1s ease infinite alternate;
+  transition: all 0.5s ease-in;
+}
+
+@keyframes shoes {
+  from {
+    top: 48%;
+  }
+
+  to {
+    top: 52%;
+  }
+}
+
+.card:hover .image {
+  /* top: 20%;
+  left: 30%; */
+  width: 220px;
+  height: auto;
+  animation: none;
+  transform: rotate(15deg) translate(-35%, -25%);
+}
+
+.text {
+  position: absolute;
+  top: 15%;
+  left: -80%;
+  color: #181818;
+  transition: all 0.3s ease-in;
+}
+.text a{
+  position: static;
+}
+
+.text span {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.text p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card:hover .text {
+  top: 15%;
+  left: 5%;
+}
+
+.fil-shoes2 {
+  fill: #a59573;
+}
+
+.products-container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* ssm sction */
+.card_sm {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  background: #f00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_sm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+
+.card_sm::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+  filter: blur(30px);
+}
+
+.card_sm b {
+  
+  position: absolute;
+  inset: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+
+}
+
+.card_sm img {
+  position: absolute;
+  z-index: 3;
+  scale: 0.8;
+  opacity: 0.25;
+  transition: 0.5s;
+}
+
+.card_sm:hover img {
+  scale: 0.5;
+  opacity: 0.9;
+  transform: translateY(-70px);
+}
+
+.card_sm .content {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.card_sm:hover .content {
+  transform: scale(1);
+  bottom: 25px;
+}
+
+.content .title {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content .title span {
+  font-weight: 300;
+  font-size: 0.70em;
+}
+
+.content .sci {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li .fa-brands {
+  width: 14px;
+}
+
+.sci li .fa-facebook {
+  width: 10px;
+}
+
+.sci li a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.sci li a:hover {
+  fill: currentColor;
+  color: rgba(255, 255, 255, 1);
+}
+/* product page */
+.card_b {
+  width: 32%;
+  height: 30vh;
+  border-radius: 4px;
+  background: red;
+  display: flex;
+  gap: 5px;
+  padding: .4em;
+}
+
+.card_b p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  background: #212121;
+  border: 1px solid #ff5a91;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_b p:hover {
+  flex: 4;
+}
+
+.card_b p span {
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all .5s;
+  text-transform: uppercase;
+  color: #ff568e;
+  letter-spacing: .1em;
+}
+
+.card_b p:hover span {
+  transform: rotate(0);
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.best_product{
+  display: flex;
+  background-image: url(https://i.pinimg.com/1200x/64/07/36/64073651f81df95b5331366eef6ae560.jpg);
+  width: 100%;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+
+}
+.option_conteiner{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  
+  height: 30vh;
+  width: 100%;
+
+
+}
+
+
+
+@media (max-width: 400px) {
+  .btn_nav {
+    position: fixed;
+    width: 50%;
+    right: -300px;
+    position: fixed;
+    width: 50%;
+    display: grid;
+    justify-content: center;
+    height: 50vh;
+  }
+  .btn_nav .btn {
+    font-size: 2vw;
+  }
+
+  .navbar_conteiner {
+    display: flex;
+    flex-direction: column column-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .navbar_conteiner .logo img {
+    height: 120px;
+    width: 125px;
+    position: relative;
+  }
+  #mobail_manue_svg {
+   visibility: hidden;
+   /* display: block; */
+  }
+
+  #mobail_manue_svg:checked + .btn_nav{
+    right: 0;
+  }
+  .navbar_conteiner img{
+    display: flex;
+    position: fixed;
+    right: 0;
+    z-index: 7;
+    width: 4vh;
+    height: 4vh;
+
+  }
+  .hearo{
+    height: 10vh;
+    min-height: 30vh;
+  }
+  #checkbox_img{
+    display: flex;
+    position: fixed;
+    right: 0;
+    z-index: 7;
+    width: 4vh;
+    height: 4vh;
+
+  }
+  #menue_button_m{
+    display: block;
+  }
+  .products-container {
+    width: 100%;
+    height: 50vh;
+  }
+  .card{
+    width: 30vw;
+    height: 55vw;
+  }
+  body{
+    height: 250vw; 
+  }
+  a{
+    display: flex;
+    flex: none;
+    font-size: 3vw;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: italic;
+    color: aliceblue;
+    
+  }
+
+}
